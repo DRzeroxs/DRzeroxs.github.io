@@ -1,0 +1,249 @@
+:root{
+    --red-main: rgb(179,57,81);
+    --red-hover: rgb(66, 28, 40);
+    --white-main: rgb(245, 245, 245);
+}
+
+*{
+    padding: none;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+img {
+    display: block;
+    width: 100%;
+  }
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+#navbar{
+    border-bottom: solid 2px black;
+    background-color: var(--red-main);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 300px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    
+}
+
+#navbar>ul{
+    list-style: none;
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+#navbar>ul>li{
+    margin-right: 20px;
+    padding: 15px 5px 15px 5px;
+}
+
+#navbar>ul>li:hover{
+    background-color: var(--red-hover);
+}
+
+@media (max-width: 500px){
+    #nav-bar{
+        justify-content: center;
+    }
+
+    #nav-bar>ul{
+        margin: 0;
+    }
+}
+
+a{
+    color: var(--white-main);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+}
+
+
+/* Welcome */
+
+#welcome-section{
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+     flex-direction: column; 
+     justify-content: center;
+    align-items: center; 
+    
+}
+
+#welcome-section>h1{
+    color: var(--white-main);
+    font-size: 6rem;
+}
+
+#welcome-section>p{
+    font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--red-main);
+}
+
+/* Projects */
+#projects{
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: initial;
+   
+}
+
+#projects>p{
+    color: var(--white-main);
+    font-size: 4rem;
+}
+
+.contenedor{
+    margin-top: 10px;
+    width: 90%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.project-tile{
+    background-color: var(--white-main);
+    text-align: end;
+    aspect-ratio: 1/1;
+}
+
+@media(max-width: 1000px){
+
+    .contenedor{
+        width: 80%;
+    }
+
+    #projects>p{
+        color: var(--white-main);
+        font-size: 3.1rem;
+    }
+
+    .contenedor{
+        grid-template-rows: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+        grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) ;
+    }
+
+}
+
+@media(max-width: 650px){
+
+    .contenedor{
+        width: 60%;
+    }
+
+
+    #projects>p{
+        color: var(--white-main);
+        font-size: 3rem;
+    }
+    .contenedor{
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+
+/* Contact */
+#contact{
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+#contact>h2{
+    color: var(--white-main);
+    font-size: 5rem;
+}
+
+#contact>p{
+    font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--red-main);
+}
+
+#contact>a:hover{
+    font-size: 3.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+@media (max-width: 900px){
+    #contact>h2{
+        color: var(--white-main);
+        font-size: 3.5rem;
+    }
+
+    #contact>p{
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 600px){
+    #contact>h2{
+        color: var(--white-main);
+        font-size: 2.6rem;
+    }
+
+    #contact>p{
+        font-size: 2rem;
+    }
+}
+
+.git{
+    margin-top: 25px;
+}
+
+/* Footer */
+#pie{
+    height: 120px;
+    width: 100%;
+    background-color: var(--red-main);
+    border-top: solid 5px black;
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+#pie>p{
+    margin: 2rem;
+    font-size: 2rem;
+    color: var(--white-main);
+}
